@@ -31,15 +31,6 @@ function FixedAnime() {
   } else {
     $('.openbtn').removeClass('fadeDown');
     $('#header').removeClass('dnone');
-    // //ヘッダーの高さを取得
-    // var headerH = $('#header').outerHeight(true);
-    // var scroll = $(window).scrollTop();
-    // if (scroll >= headerH) {//ヘッダーの高さ以上までスクロールしたら
-    //   $('.openbtn').addClass('fadeDown');//.openbtnにfadeDownというクラス名を付与して
-    //   $('#header').addClass('dnone');//#headerにdnoneというクラス名を付与
-    // } else {//それ以外は
-    //   $('.openbtn').removeClass('fadeDown');//fadeDownというクラス名を除き
-    //   $('#header').removeClass('dnone');//dnoneというクラス名を除く
   }
 }
 
@@ -63,6 +54,7 @@ $("#g-navi li a").click(function () {//ナビゲーションのリンクがク�
   $(".openbtn").removeClass('active');//ボタンの activeクラスを除去し
   $("#header").removeClass('panelactive');//ヘッダーのpanelactiveクラスも除去
 });
+
 // ウィンドウのリサイズ時にも処理を実行
 $(window).resize(function () {
   handleScrollAndResize();
@@ -84,15 +76,14 @@ $(window).resize(function () {
     $("#header").removeClass("responsive"); // クラスが不要なら削除
   }
 });
-
 var swiper = new Swiper('.swiper', {
-  slidesPerView: 1.2,
-  spaceBetween: 29,
-  centeredSlides: true,
+  loop: true,
+  slidesPerView: 1,
+  spaceBetween: 58,
   breakpoints: {
     768: {
-      slidesPerView: 1.5,
-      spaceBetween: 58,
+      slidesPerView: 3,
+      spaceBetween: 80,
       centeredSlides: true,
     },
   },
@@ -112,6 +103,81 @@ var swiper = new Swiper('.swiper', {
   },
 });
 
+// var swiper = new Swiper('.swiper', {
+//   loop: true,
+//   slidesPerView: 1,
+//   spaceBetween: 58,
+//   breakpoints: {
+//     768: {
+//       slidesPerView: 3,
+//       spaceBetween: 80,
+//       centeredSlides: true,
+//     },
+//   },
+//   pagination: {
+//     el: '.swiper-pagination',
+//     type: 'fraction',
+//     formatFractionCurrent: function (n) {
+//       return '0' + n;
+//     },
+//     formatFractionTotal: function (n) {
+//       return '0' + n;
+//     },
+//   },
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+// });
+
+// const mySwiper = new Swiper('.swiper', {
+//   // Optional parameters
+//   loop: true,
+
+//   // If we need pagination
+//   pagination: {
+//     el: '.swiper-pagination',
+//   },
+
+//   // Navigation arrows
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+
+// And if we need scrollbar
+// scrollbar: {
+//   el: '.swiper-scrollbar',
+// },
+// });
+
+// var swiper = new Swiper('.swiper', {
+//   slidesPerView: 1.2,
+//   spaceBetween: 29,
+//   centeredSlides: true,
+//   breakpoints: {
+//     768: {
+//       slidesPerView: 1.5,
+//       spaceBetween: 58,
+//       centeredSlides: true,
+//     },
+//   },
+//   pagination: {
+//     el: '.swiper-pagination',
+//     type: 'fraction',
+//     formatFractionCurrent: function (n) {
+//       return '0' + n;
+//     },
+//     formatFractionTotal: function (n) {
+//       return '0' + n;
+//     },
+//   },
+//   navigation: {
+//     nextEl: '.swiper-button-next',
+//     prevEl: '.swiper-button-prev',
+//   },
+// });
+
 $(".appeal h3").on("click", function (e) {
   $(this).toggleClass("open");
   $(this).next().slideToggle();
@@ -121,31 +187,3 @@ $(".appeal h3").on("click", function (e) {
 $(".hamburger_icon").on("click", function (e) {
   $(".hamburger-nav").slideToggle();
 });
-
-///////////////////
-// document.addEventListener('DOMContentLoaded', function () {
-//   const hamburger = document.querySelector('.c-hamburger');
-//   const headNav = document.querySelector('#js-nav');
-
-//   hamburger.addEventListener('click', () => {
-//     if (hamburger.classList.contains("is-active")) {
-//       hamburger.classList.remove('is-active');
-//       hamburger.querySelector('.c-hamburger__text').textContent = 'MENU';
-//       headNav.classList.remove('is-active')
-//     } else {
-//       hamburger.classList.add('is-active');
-//       hamburger.querySelector('.c-hamburger__text').textContent = 'CLOSE';
-//       headNav.classList.add('is-active')
-//     }
-//   });
-
-
-//   headNav.addEventListener('click', () => {
-//     hamburger.classList.remove('is-active');
-//     hamburger.querySelector('.c-hamburger__text').textContent = 'MENU';
-//     headNav.classList.remove('is-active')
-//   });
-
-// });
-
-
