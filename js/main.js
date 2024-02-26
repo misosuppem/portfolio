@@ -41,7 +41,7 @@ $(window).scroll(function () {
 
 // ページが読み込まれたらすぐに動かしたい場合の記述
 $(window).on('load', function () {
-  FixedAnime();//スクロールをするとハンバーガーメニューに変化するための関数を呼ぶ
+  FixedAnime();
 });
 
 
@@ -57,7 +57,8 @@ $("#g-navi li a").click(function () {//ナビゲーションのリンクがク�
 
 // ウィンドウのリサイズ時にも処理を実行
 $(window).resize(function () {
-  handleScrollAndResize();
+  // handleScrollAndResize();
+  FixedAnime();
 });
 
 //リンク先のidまでスムーススクロール
@@ -68,7 +69,7 @@ $('#g-navi li a').click(function () {
   $('body,html').animate({ scrollTop: pos }, 1000);
   return false;
 });
-// ウィンドウの幅が767ピクセル以下の場合のみハンバーガーメニューを表示
+// ウィンドウの幅が767ピクセル以下の場合ハンバーガーメニューを表示
 $(window).resize(function () {
   if ($(window).width() <= 767) {
     $("#header").addClass("responsive"); // ハンバーガーメニュー表示用のクラスを追加
@@ -76,32 +77,7 @@ $(window).resize(function () {
     $("#header").removeClass("responsive"); // クラスが不要なら削除
   }
 });
-var swiper = new Swiper('.swiper', {
-  loop: true,
-  slidesPerView: 1,
-  spaceBetween: 58,
-  breakpoints: {
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 80,
-      centeredSlides: true,
-    },
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'fraction',
-    formatFractionCurrent: function (n) {
-      return '0' + n;
-    },
-    formatFractionTotal: function (n) {
-      return '0' + n;
-    },
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
+
 
 // var swiper = new Swiper('.swiper', {
 //   loop: true,
@@ -145,38 +121,29 @@ var swiper = new Swiper('.swiper', {
 //     prevEl: '.swiper-button-prev',
 //   },
 
-// And if we need scrollbar
-// scrollbar: {
-//   el: '.swiper-scrollbar',
-// },
+//   //And if we need scrollbar
+//   scrollbar: {
+//     el: '.swiper-scrollbar',
+//   },
 // });
 
-// var swiper = new Swiper('.swiper', {
-//   slidesPerView: 1.2,
-//   spaceBetween: 29,
-//   centeredSlides: true,
-//   breakpoints: {
-//     768: {
-//       slidesPerView: 1.5,
-//       spaceBetween: 58,
-//       centeredSlides: true,
-//     },
-//   },
-//   pagination: {
-//     el: '.swiper-pagination',
-//     type: 'fraction',
-//     formatFractionCurrent: function (n) {
-//       return '0' + n;
-//     },
-//     formatFractionTotal: function (n) {
-//       return '0' + n;
-//     },
-//   },
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-// });
+var swiper = new Swiper('.swiper', {
+  slidesPerView: 1,
+  spaceBetween: 29,
+  centeredSlides: true,
+  loop: true,
+  breakpoints: {
+    768: {
+      slidesPerView: "auto",
+      spaceBetween: 40,
+      centeredSlides: true,
+    },
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
 
 $(".appeal h3").on("click", function (e) {
   $(this).toggleClass("open");
