@@ -105,8 +105,8 @@ li {
 .openbtn {
   display: none;
   position: fixed;
-  top: 2rem;
-  right: 18rem;
+  top: 5%;
+  left: 77%;
   z-index: 999;
   cursor: pointer;
   border-radius: 5px;
@@ -736,7 +736,7 @@ li {
   background-color: #001925;
   /* gridの幅に合わせて左に配置 */
   height: 100%;
-  width: 24rem;
+  width: 12.3%;
 }
 
 .frame_right {
@@ -775,14 +775,20 @@ li {
 
 .section.one {
   grid-area: a;
+  background-image: url('/images/blog_1.png');
+  background-size: cover;
 }
 
 .section.two {
   grid-area: b;
+  background-image: url('/images/blog_2.png');
+  background-size: cover;
 }
 
 .section.three {
   grid-area: c;
+  background-image: url('/images/blog_3.png');
+  background-size: cover;
 }
 
 .section.four {
