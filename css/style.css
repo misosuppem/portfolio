@@ -121,6 +121,7 @@ li {
   border-radius: 2px;
   background-color: #001A26;
   width: 6rem;
+  box-shadow: 0 0 0 1px #fff;
 }
 
 @media screen and (max-width: 767px) {
@@ -610,7 +611,7 @@ li {
 .work .swiper {
   margin: 10rem auto 0;
   width: 100%;
-  max-width: 82%;
+  max-width: 83%;
   height: 100%;
   overflow: hidden;
 }
@@ -721,6 +722,13 @@ li {
   text-align: center;
 }
 
+.blog_container {
+  background-color: #001925;
+  max-width: 86%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .blog .golden-ratio_container {
   position: relative;
   width: 100%;
@@ -728,20 +736,19 @@ li {
   margin: 0 auto;
 }
 
-.frame_left,
+/* .frame_left,
 .frame_right {
   position: absolute;
   top: 0;
   left: var(--base-width);
   background-color: #001925;
-  /* gridの幅に合わせて左に配置 */
   height: 100%;
   width: 12.3%;
 }
 
 .frame_right {
-  right: var(--base-width);
-}
+  right: calc(var(--base-width) * 2);
+} */
 
 .golden-ratio {
   margin: auto;
@@ -793,7 +800,29 @@ li {
 
 .section.four {
   grid-area: d;
+  background-color: #001925;
+  position: relative;
 }
+
+.section.four::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  border-radius: 178px 0px 0px 0px;
+  background: #fff;
+}
+
+.section.four a {
+  z-index: 10;
+  position: absolute;
+  rotate: -90deg;
+  top: 50%;
+  left: 50%;
+}
+
 
 /* .section.five {
   grid-area: e;
