@@ -40,6 +40,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #001A26;
 }
 
 img {
@@ -660,8 +661,8 @@ li {
 .work .swiper-slide::after {
   position: absolute;
   content: "";
-  width: 35rem;
-  height: 35rem;
+  width: 79%;
+  height: 71%;
   background: #fff;
   border: 1px solid rgba(0, 26, 38, 0.17);
 }
@@ -721,26 +722,33 @@ li {
 .blog {
   padding-top: 5rem;
   text-align: center;
+  width: 100%;
 }
 
 .blog_container {
   background-color: #001A26;
-  max-width: 86%;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .blog .golden-ratio_container {
-  position: relative;
+  /* position: relative; */
   width: 100%;
-  max-width: 86%;
+  /* max-width: 80%; */
   margin: 0 auto;
 }
 
 .golden-ratio {
-  margin: auto;
-  /* margin: 0 auto; */
-  --base-width: 124.4rem;
+  /* margin: auto; */
+  margin: 0 auto;
+  width: 100%;
+  width: auto;
+  box-sizing: border-box;
+  /* width: 70%; */
+  /* overflow: hidden; */
+  max-width: 80%;
+  /* --base-width: 100rem; */
+  --base-width: calc(120rem - 9em);
   width: var(--base-width);
   height: calc(var(--base-width) * (13 / 21));
   display: grid;
@@ -762,36 +770,50 @@ li {
     "a d d c";
 }
 
-.section {
+@media screen and (max-width: 1600px) {
+  .golden-ratio {
+    --base-width: 80rem
+      /* --base-width: calc(120rem - 9em); */
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .golden-ratio {
+    --base-width: 60rem
+  }
+}
+
+.blog_content {
+  /* --base-width: 90rem */
   border: 1px solid;
   position: relative;
 }
 
-.section.one {
+.blog_content.one {
   grid-area: a;
   background-image: url('/images/blog_1.png');
   background-size: cover;
 }
 
-.section.two {
+.blog_content.two {
   grid-area: b;
   background-image: url('/images/blog_2.png');
   background-size: cover;
 }
 
-.section.three {
+.blog_content.three {
   grid-area: c;
   background-image: url('/images/blog_3.png');
   background-size: cover;
 }
 
-.section.four {
+.blog_container a {
   grid-area: d;
-  background-color: #001a26;
   position: relative;
+  display: grid;
 }
 
-.section.four::after {
+.blog_content.four {
   position: absolute;
   content: "";
   width: 100%;
@@ -802,14 +824,12 @@ li {
   background: #fff;
 }
 
-.section.four a {
-  font-size: 4rem;
-  color: #001a26;
-  z-index: 10;
+.blog_content.four p {
   position: absolute;
-  display: block;
   rotate: -90deg;
   top: 50%;
+  color: #001a26;
+  font-size: 2em;
 }
 
 .contact {
@@ -823,6 +843,7 @@ li {
 }
 
 .contact .section_title {
+  margin-bottom: 7.5rem;
   font-weight: bold;
   font-size: 6.4rem;
   letter-spacing: 0.15em;
@@ -837,5 +858,47 @@ li {
   font-weight: bold;
   font-size: 4.6rem;
   color: #fff;
-  white-space: nowrap;
+  /* white-space: nowrap; */
+  margin-bottom: 4.5rem;
 }
+
+.contact button {
+  margin-bottom: 5.9rem;
+  font-weight: bold;
+  font-size: 4.6rem;
+  color: #fff;
+  width: 53rem;
+  height: 10rem;
+  border-radius: 50rem;
+  background: transparent;
+  border: 3px solid #feed17;
+  background: transparent;
+}
+
+.footer {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.footer_snslinks {
+  display: flex;
+  max-width: 67.5rem;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer_snslink {
+  font-size: 11rem;
+  color: #001A26;
+}
+
+/*
+.footer .footer_sns {
+  position: relative;
+}
+
+#Brandsスタイルのアイコン .footer .footer_sns::after {
+  position: absolute;
+  font: var(--fa-font-brands);
+  content: "\f179";
+} */
