@@ -121,7 +121,7 @@ li {
   border-radius: 2px;
   background-color: #001A26;
   width: 6rem;
-  box-shadow: 0 0 0 1px #fff;
+  box-shadow: 0 0 0 0.5px #fff;
 }
 
 @media screen and (max-width: 767px) {
@@ -684,8 +684,9 @@ li {
 .work .swiper-button-prev {
   border-radius: 50%;
   background-color: rgb(246, 243, 220);
-  width: 13rem;
-  height: 13rem;
+  width: 11rem;
+  height: 11rem;
+  margin-top: 1rem;
   opacity: 1;
 }
 
@@ -694,9 +695,9 @@ li {
   position: absolute;
   content: "";
   border-radius: 50%;
-  width: 12.5rem;
-  height: 12.5rem;
-  background: #001925;
+  width: 10.5rem;
+  height: 10.5rem;
+  background: #001a26;
 }
 
 .work .swiper-button-next::after,
@@ -708,7 +709,7 @@ li {
   height: 0;
   margin-left: 1rem;
   border-style: solid;
-  border-width: 4rem 0 4rem 5rem;
+  border-width: 3rem 0 3rem 4rem;
   border-color: transparent transparent transparent #ffffff;
 }
 
@@ -723,7 +724,7 @@ li {
 }
 
 .blog_container {
-  background-color: #001925;
+  background-color: #001A26;
   max-width: 86%;
   margin-left: auto;
   margin-right: auto;
@@ -735,20 +736,6 @@ li {
   max-width: 86%;
   margin: 0 auto;
 }
-
-/* .frame_left,
-.frame_right {
-  position: absolute;
-  top: 0;
-  left: var(--base-width);
-  background-color: #001925;
-  height: 100%;
-  width: 12.3%;
-}
-
-.frame_right {
-  right: calc(var(--base-width) * 2);
-} */
 
 .golden-ratio {
   margin: auto;
@@ -800,7 +787,7 @@ li {
 
 .section.four {
   grid-area: d;
-  background-color: #001925;
+  background-color: #001a26;
   position: relative;
 }
 
@@ -816,34 +803,39 @@ li {
 }
 
 .section.four a {
+  font-size: 4rem;
+  color: #001a26;
   z-index: 10;
   position: absolute;
+  display: block;
   rotate: -90deg;
   top: 50%;
-  left: 50%;
 }
 
-
-/* .section.five {
-  grid-area: e;
+.contact {
+  background-color: #001A26;
+  text-align: center;
+  margin-top: 9rem;
 }
 
-.section.five::after {
-  border-radius: 100% 0 0 0;
+.contact_container {
+  padding-top: 9rem;
 }
 
-.section.six {
-  grid-area: f;
+.contact .section_title {
+  font-weight: bold;
+  font-size: 6.4rem;
+  letter-spacing: 0.15em;
+  color: #feed17;
+  text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF,
+    -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+    0px 1px 0 #FFF, 0-1px 0 #FFF,
+    -1px 0 0 #FFF, 1px 0 0 #FFF;
 }
 
-.section.six::after {
-  border-radius: 0 100% 0 0;
+.contact .contact_container div {
+  font-weight: bold;
+  font-size: 4.6rem;
+  color: #fff;
+  white-space: nowrap;
 }
-
-.section.seven {
-  grid-area: g;
-}
-
-.section.seven::after {
-  border-radius: 0 0 100% 0;
-} */
