@@ -113,6 +113,12 @@ li {
   border-radius: 5px;
 }
 
+@media screen and (max-width: 767px) {
+  .openbtn {
+    left: 50%;
+  }
+}
+
 .openbtn span {
   display: inline-block;
   transition: all .4s;
@@ -318,11 +324,11 @@ li {
   object-fit: cover;
 }
 
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
   .cover_img {
     object-position: 46%;
   }
-}
+} */
 
 .cover_text {
   position: absolute;
@@ -337,10 +343,10 @@ li {
 
 @media screen and (max-width: 767px) {
   .cover_text {
-    top: 50rem;
+    /* top: 50rem; */
     left: auto;
     right: auto;
-    font-size: 2rem;
+    font-size: 3rem;
     letter-spacing: 0;
     text-align: center;
   }
@@ -349,8 +355,12 @@ li {
 .about {
   margin-top: 9rem;
   margin-bottom: 6rem;
-  margin-left: auto;
-  margin-right: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .about {
+    margin-top: 6rem;
+  }
 }
 
 .section_title {
@@ -358,6 +368,14 @@ li {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 8rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .section_title {
+    margin-bottom: 3.4rem;
+    max-width: 34rem;
+  }
 }
 
 .about_container {
@@ -369,6 +387,14 @@ li {
   width: 100%;
   gap: 7rem;
   max-width: 159.6rem;
+}
+
+@media screen and (max-width: 767px) {
+  .about_container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+  }
 }
 
 .introducion_container {
@@ -636,7 +662,7 @@ li {
 
 @media screen and (max-width: 767px) {
   .work {
-    margin-top: -11rem;
+    /* margin-top: -11rem; */
     padding-bottom: 15rem;
   }
 }
@@ -790,29 +816,25 @@ li {
   width: 100%;
 }
 
+@media screen and (max-width: 767px) {
+  .blog {
+    padding-top: 9rem;
+    padding-bottom: 12rem;
+  }
+}
+
 .blog_container {
   background-color: #001A26;
   width: 100%;
   margin: 0 auto;
 }
 
-.blog .golden-ratio_container {
-  /* position: relative; */
-  width: 100%;
-  /* max-width: 80%; */
-  margin: 0 auto;
-}
-
 .golden-ratio {
-  /* margin: auto; */
   margin: 0 auto;
   width: 100%;
   width: auto;
   box-sizing: border-box;
-  /* width: 70%; */
-  /* overflow: hidden; */
   max-width: 80%;
-  /* --base-width: 100rem; */
   --base-width: calc(120rem - 9em);
   width: var(--base-width);
   height: calc(var(--base-width) * (13 / 21));
@@ -850,10 +872,18 @@ li {
     --base-width: 60rem
   }
 
+  @media screen and (max-width: 767px) {
+    .golden-ratio {
+      overflow: hidden;
+    }
+  }
+
   .blog_content.four p {
     font-size: 1em !important;
   }
 }
+
+
 
 .blog_content {
   /* --base-width: 90rem */

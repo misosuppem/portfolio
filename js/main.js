@@ -1,24 +1,3 @@
-// //ハンバーガーメニュー
-// var hamburger = $('.hamburger-menu');
-
-// // OPEN/CLOSEボタンをクリックしたら
-// $('.hamburger-button').on('click', function () {
-
-//   // .hamburgerの表示・非表示を繰り返す
-//   hamburger.toggleClass('hamburger-menu-active');
-
-// });
-
-// // 画面幅のサイズが変わったら
-// $(window).on('resize', function () {
-//   // console.log('resize');
-
-//   // ハンバーガーメニューを閉じる
-//   hamburger.removeClass('hamburger-menu-active');
-// });
-
-
-
 //スクロールをするとハンバーガーメニューに変化するための設定を関数でまとめる
 function FixedAnime() {
   var windowWidth = $(window).width();
@@ -78,55 +57,6 @@ $(window).resize(function () {
   }
 });
 
-
-// var swiper = new Swiper('.swiper', {
-//   loop: true,
-//   slidesPerView: 1,
-//   spaceBetween: 58,
-//   breakpoints: {
-//     768: {
-//       slidesPerView: 3,
-//       spaceBetween: 80,
-//       centeredSlides: true,
-//     },
-//   },
-//   pagination: {
-//     el: '.swiper-pagination',
-//     type: 'fraction',
-//     formatFractionCurrent: function (n) {
-//       return '0' + n;
-//     },
-//     formatFractionTotal: function (n) {
-//       return '0' + n;
-//     },
-//   },
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-// });
-
-// const mySwiper = new Swiper('.swiper', {
-//   // Optional parameters
-//   loop: true,
-
-//   // If we need pagination
-//   pagination: {
-//     el: '.swiper-pagination',
-//   },
-
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-
-//   //And if we need scrollbar
-//   scrollbar: {
-//     el: '.swiper-scrollbar',
-//   },
-// });
-
 var swiper = new Swiper('.swiper', {
   slidesPerView: 1,
   spaceBetween: 29,
@@ -148,14 +78,4 @@ var swiper = new Swiper('.swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-});
-
-$(".appeal h3").on("click", function (e) {
-  $(this).toggleClass("open");
-  $(this).next().slideToggle();
-});
-
-
-$(".hamburger_icon").on("click", function (e) {
-  $(".hamburger-nav").slideToggle();
 });
