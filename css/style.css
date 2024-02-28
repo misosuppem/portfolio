@@ -382,15 +382,27 @@ li {
   position: absolute;
   top: 1.4rem;
   left: -.5rem;
-  height: 90px;
+  height: 9rem;
   width: 70%;
-  line-height: 90px;
+  line-height: 9rem;
   text-align: center;
   font-size: 4.6rem;
   background-color: #001A26;
   color: #FFF;
   box-sizing: border-box;
   z-index: 1;
+}
+
+@media screen and (max-width: 1600px) {
+  .ribbon {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .ribbon {
+    font-size: 3rem;
+  }
 }
 
 .ribbon:after {
@@ -401,7 +413,7 @@ li {
   z-index: 1;
   top: 0;
   right: 0;
-  border-width: 45px 45px 45px 0px;
+  border-width: 4.5rem 4.5rem 4.5rem 0px;
   border-color: transparent #fff transparent transparent;
   border-style: solid;
 }
@@ -443,6 +455,18 @@ li {
   margin-bottom: 1.8rem;
 }
 
+@media screen and (max-width: 1150px) {
+  .skills_title_box {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .skills_title_box {
+    font-size: 4rem;
+  }
+}
+
 .skills_title_box::after {
   position: absolute;
   content: "";
@@ -451,7 +475,7 @@ li {
   z-index: 10;
   display: block;
   width: 100%;
-  height: 96px;
+  height: 100%;
   border-radius: 0px 0px 107px 107px;
   background-color: #001a26;
 }
@@ -493,6 +517,18 @@ li {
   background-color: #FFF;
   margin-bottom: 1rem;
   padding-left: 2.8rem;
+}
+
+@media screen and (max-width: 1600px) {
+  .skill_box {
+    font-size: 3.6rem;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .skill_box {
+    font-size: 3rem;
+  }
 }
 
 .skill_box::before {
@@ -588,10 +624,11 @@ li {
 
 .work {
   background-color: #001A26;
-  height: 1080px;
+  /* height: 1080px; */
   width: 100%;
   line-height: 0;
   padding-top: 9.3rem;
+  padding-bottom: 9.3rem;
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -658,6 +695,18 @@ li {
   box-shadow: -6px 6px 12px rgba(0, 0, 0, 0.1);
 }
 
+@media screen and (max-width: 1600px) {
+  .work .swiper-slide {
+    height: 40rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .work .swiper-slide {
+    height: 35rem;
+  }
+}
+
 .work .swiper-slide::after {
   position: absolute;
   content: "";
@@ -677,8 +726,24 @@ li {
 }
 
 .work .swiper-slide p {
+  position: absolute;
+  top: 40%;
   z-index: 10;
-  margin-top: 15rem;
+  /* margin-top: 15rem; */
+}
+
+@media screen and (max-width: 1600px) {
+  .work .swiper-slide p {
+    /* margin-top: 10rem; */
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .work .swiper-slide p {
+    /* margin-top: 10rem; */
+    font-size: 2rem;
+  }
 }
 
 .work .swiper-button-next,
@@ -773,13 +838,20 @@ li {
 @media screen and (max-width: 1600px) {
   .golden-ratio {
     --base-width: 80rem
-      /* --base-width: calc(120rem - 9em); */
+  }
+
+  .blog_content.four p {
+    font-size: 1.5em !important;
   }
 }
 
 @media screen and (max-width: 1300px) {
   .golden-ratio {
     --base-width: 60rem
+  }
+
+  .blog_content.four p {
+    font-size: 1em !important;
   }
 }
 
