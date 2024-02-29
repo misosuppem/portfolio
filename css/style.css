@@ -12,11 +12,11 @@ html {
   }
 }
 
-@media screen and (max-width: 767px) {
+/* @media screen and (max-width: 767px) {
   html {
     font-size: calc(10 / 375 * 100vw);
   }
-}
+} */
 
 body {
   font-family: 'DIN Alternate', 'Oswald', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
@@ -68,6 +68,7 @@ li {
 
 @media screen and (max-width: 767px) {
   .container {
+    max-width: 71%;
     padding: 0 0.1rem;
   }
 }
@@ -103,6 +104,12 @@ li {
   padding-right: 16px;
 }
 
+@media screen and (max-width: 767px) {
+  .wrapper {
+    max-width: 71%;
+  }
+}
+
 .openbtn {
   display: none;
   position: fixed;
@@ -115,7 +122,13 @@ li {
 
 @media screen and (max-width: 767px) {
   .openbtn {
-    left: 50%;
+    left: 65%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .openbtn {
+    left: 55%;
   }
 }
 
@@ -159,7 +172,7 @@ li {
 
 @media screen and (max-width: 767px) {
   .openbtn.active span:nth-of-type(1) {
-    top: 3.35rem;
+    top: 2.8rem;
     left: 10.8rem;
   }
 }
@@ -337,16 +350,15 @@ li {
   color: #fff;
   letter-spacing: 0.3rem;
   width: 100%;
-  padding: 2rem 2rem;
+  padding: 2rem 5rem;
   text-align: right;
 }
 
 @media screen and (max-width: 767px) {
   .cover_text {
-    /* top: 50rem; */
     left: auto;
     right: auto;
-    font-size: 3rem;
+    font-size: 5rem;
     letter-spacing: 0;
     text-align: center;
   }
@@ -360,6 +372,7 @@ li {
 @media screen and (max-width: 767px) {
   .about {
     margin-top: 6rem;
+    margin-bottom: 23rem;
   }
 }
 
@@ -374,7 +387,7 @@ li {
 @media screen and (max-width: 767px) {
   .section_title {
     margin-bottom: 3.4rem;
-    max-width: 34rem;
+    max-width: 18rem;
   }
 }
 
@@ -391,9 +404,9 @@ li {
 
 @media screen and (max-width: 767px) {
   .about_container {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     padding: 0;
+    gap: 3rem;
   }
 }
 
@@ -401,6 +414,13 @@ li {
   width: 71.5rem;
   height: 68rem;
   text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  .introducion_container {
+    width: 100%;
+    height: 30rem;
+  }
 }
 
 .ribbon {
@@ -431,6 +451,14 @@ li {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .ribbon {
+    height: 4.3rem;
+    font-size: 2.6rem;
+    line-height: 4rem;
+  }
+}
+
 .ribbon:after {
   position: absolute;
   content: '';
@@ -442,6 +470,12 @@ li {
   border-width: 4.5rem 4.5rem 4.5rem 0px;
   border-color: transparent #fff transparent transparent;
   border-style: solid;
+}
+
+@media screen and (max-width: 767px) {
+  .ribbon:after {
+    border-width: 2.2rem 2.2rem 2.2rem 0px;
+  }
 }
 
 .introducion {
@@ -458,14 +492,40 @@ li {
   box-shadow: 8px 8px 50px rgba(0, 0, 0, 0.2);
 }
 
+@media screen and (max-width: 767px) {
+  .introducion {
+    /* max-height: 30rem; */
+  }
+}
+
 .introduction_text {
   font-size: 2.4rem;
   padding: 0 4rem;
 }
 
+@media screen and (max-width: 767px) {
+  .introduction_text {
+    font-size: 1.8rem;
+    padding: 7rem 2rem 3rem;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .introduction_text {
+    font-size: 1.2rem;
+  }
+}
+
 .myskills_container {
   width: 71.5rem;
   height: 68rem
+}
+
+@media screen and (max-width: 767px) {
+  .myskills_container {
+    width: 100%;
+    height: 30rem;
+  }
 }
 
 .skills_title_box {
@@ -484,12 +544,31 @@ li {
 @media screen and (max-width: 1150px) {
   .skills_title_box {
     font-size: 4rem;
+    width: 71%;
   }
 }
 
 @media screen and (max-width: 1030px) {
   .skills_title_box {
-    font-size: 4rem;
+    font-weight: bold;
+    font-size: 3.5rem;
+    letter-spacing: 0.03em;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .skills_title_box {
+    width: 100%;
+    height: 7.9rem;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .skills_title_box {
+    font-size: 1.2rem;
+    height: 5.9rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -506,6 +585,12 @@ li {
   background-color: #001a26;
 }
 
+@media screen and (max-width: 767px) {
+  .skills_title_box::after {
+    height: 5.6rem;
+  }
+}
+
 .skills_title {
   color: #FFF;
   position: absolute;
@@ -513,6 +598,14 @@ li {
   display: flex;
   align-items: center;
   white-space: nowrap;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  .skills_title {
+    font-size: 2.6rem;
+    letter-spacing: 0.1em;
+  }
 }
 
 .skills_title::before,
@@ -525,6 +618,15 @@ li {
   border-style: solid;
   border-width: 2.5rem 1.5rem 0 1.5rem;
   border-color: #FFFFFF transparent transparent transparent;
+}
+
+@media screen and (max-width: 767px) {
+
+  .skills_title::before,
+  .skills_title:after {
+    left: -40%;
+    border-width: 1.5rem 1rem 0 1rem;
+  }
 }
 
 .skills_title:after {
@@ -557,6 +659,14 @@ li {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .skill_box {
+    font-size: 2.6rem;
+    height: 5.3rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
 .skill_box::before {
   position: absolute;
   content: "";
@@ -566,6 +676,12 @@ li {
   border-style: solid;
   border-width: 1.5rem 0 1.5rem 2.5rem;
   border-color: transparent transparent transparent #ffffff;
+}
+
+@media screen and (max-width: 767px) {
+  .skill_box::before {
+    border-width: 1rem 0 1rem 1.5rem;
+  }
 }
 
 .skill_box::after {
@@ -992,6 +1108,12 @@ li {
 .footer_snslink {
   font-size: 11rem;
   color: #001A26;
+}
+
+@media screen and (max-width: 767px) {
+  .footer_snslink {
+    font-size: 7.9rem;
+  }
 }
 
 /*

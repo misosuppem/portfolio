@@ -58,6 +58,7 @@ $(window).resize(function () {
 });
 
 var swiper = new Swiper('.swiper', {
+  // direction: "vertical",
   slidesPerView: 1,
   spaceBetween: 29,
   centeredSlides: true,
