@@ -58,18 +58,22 @@ $(window).resize(function () {
 });
 
 var swiper = new Swiper('.swiper', {
-  // direction: "vertical",
-  slidesPerView: 1,
-  spaceBetween: 29,
+  direction: "vertical",
+  slideToClickedSlide: true,
+  mousewheel: true,
+  slidesPerView: 1.5,
+  spaceBetween: 15,
   centeredSlides: true,
   loop: true,
   breakpoints: {
     768: {
+      direction: "horizontal",
       slidesPerView: 3,
       spaceBetween: 20,
       centeredSlides: true,
     },
     1600: {
+      direction: "horizontal",
       slidesPerView: 3,
       spaceBetween: 40,
       centeredSlides: true,

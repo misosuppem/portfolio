@@ -74,7 +74,7 @@ li {
 }
 
 .no-sp {
-  display: inline-block;
+  display: grid !important;
 }
 
 .no-pc {
@@ -87,7 +87,7 @@ li {
   }
 
   .no-sp {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -129,6 +129,12 @@ li {
 @media screen and (max-width: 450px) {
   .openbtn {
     left: 55%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .openbtn {
+    left: 40%;
   }
 }
 
@@ -387,7 +393,8 @@ li {
 @media screen and (max-width: 767px) {
   .section_title {
     margin-bottom: 3.4rem;
-    max-width: 18rem;
+    max-width: 71%;
+    width: 100%;
   }
 }
 
@@ -399,7 +406,6 @@ li {
   padding: 3rem 0;
   width: 100%;
   gap: 7rem;
-  max-width: 159.6rem;
 }
 
 @media screen and (max-width: 767px) {
@@ -544,7 +550,7 @@ li {
 @media screen and (max-width: 1150px) {
   .skills_title_box {
     font-size: 4rem;
-    width: 71%;
+    /* width: 71%; */
   }
 }
 
@@ -629,6 +635,14 @@ li {
   }
 }
 
+@media screen and (max-width: 450px) {
+
+  .skills_title::before,
+  .skills_title:after {
+    display: none;
+  }
+}
+
 .skills_title:after {
   left: 120%;
 }
@@ -667,6 +681,13 @@ li {
   }
 }
 
+@media screen and (max-width: 520px) {
+  .skill_box {
+    font-size: 2.2rem;
+    padding-left: 1rem;
+  }
+}
+
 .skill_box::before {
   position: absolute;
   content: "";
@@ -681,6 +702,12 @@ li {
 @media screen and (max-width: 767px) {
   .skill_box::before {
     border-width: 1rem 0 1rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .skill_box::before {
+    display: none;
   }
 }
 
@@ -783,11 +810,6 @@ li {
   }
 }
 
-.work .section_title {
-  margin-bottom: 0rem;
-  text-align: center;
-}
-
 .work .swiper {
   margin: 10rem auto 0;
   width: 100%;
@@ -822,6 +844,12 @@ li {
   box-sizing: content-box;
 }
 
+@media screen and (max-width: 767px) {
+  .swiper-wrapper {
+    height: 50rem;
+  }
+}
+
 .work .swiper-slide {
   position: relative;
   background-color: #F8F8F4;
@@ -840,12 +868,26 @@ li {
 @media screen and (max-width: 1600px) {
   .work .swiper-slide {
     height: 40rem;
+    width: 10rem;
   }
 }
 
 @media screen and (max-width: 1200px) {
   .work .swiper-slide {
     height: 35rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .work .swiper-slide {
+    font-size: 2rem;
+    height: 35rem;
+    width: 100%;
+    height: 16.4rem;
+    padding-top: 1.3rem;
+    padding-right: 0.5rem;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
@@ -856,15 +898,6 @@ li {
   height: 71%;
   background: #fff;
   border: 1px solid rgba(0, 26, 38, 0.17);
-}
-
-@media screen and (max-width: 767px) {
-  .work .swiper-slide {
-    font-size: 2rem;
-    height: 11.4rem;
-    padding-top: 1.3rem;
-    padding-right: 0.5rem;
-  }
 }
 
 .work .swiper-slide p {
@@ -888,6 +921,12 @@ li {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .work .swiper-slide p {
+    font-size: 1.8rem;
+  }
+}
+
 .work .swiper-button-next,
 .work .swiper-button-prev {
   border-radius: 50%;
@@ -896,6 +935,14 @@ li {
   height: 11rem;
   margin-top: 1rem;
   opacity: 1;
+}
+
+@media screen and (max-width: 767px) {
+
+  .work .swiper-button-next,
+  .work .swiper-button-prev {
+    display: none;
+  }
 }
 
 .work .swiper-button-next::before,
@@ -945,6 +992,12 @@ li {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 767px) {
+  .blog_container {
+    height: 75rem;
+  }
+}
+
 .golden-ratio {
   margin: 0 auto;
   width: 100%;
@@ -987,11 +1040,11 @@ li {
   .golden-ratio {
     --base-width: 60rem
   }
+}
 
-  @media screen and (max-width: 767px) {
-    .golden-ratio {
-      overflow: hidden;
-    }
+@media screen and (max-width: 767px) {
+  .golden-ratio {
+    overflow: hidden;
   }
 
   .blog_content.four p {
@@ -999,10 +1052,7 @@ li {
   }
 }
 
-
-
 .blog_content {
-  /* --base-width: 90rem */
   border: 1px solid;
   position: relative;
 }
@@ -1013,11 +1063,24 @@ li {
   background-size: cover;
 }
 
+@media screen and (max-width: 767px) {
+  .blog_container>.blog_content {
+    position: relative;
+    background-size: cover;
+    background-image: url(/images/blog_1.png);
+    width: 100%;
+    top: 10%;
+    height: 70%;
+    background-position: center top;
+  }
+}
+
 .blog_content.two {
   grid-area: b;
   background-image: url('/images/blog_2.png');
   background-size: cover;
 }
+
 
 .blog_content.three {
   grid-area: c;
@@ -1031,6 +1094,7 @@ li {
   display: grid;
 }
 
+
 .blog_content.four {
   position: absolute;
   content: "";
@@ -1042,12 +1106,46 @@ li {
   background: #fff;
 }
 
+@media screen and (max-width: 767px) {
+  .blog_content .no-pc {
+    background-color: #fff;
+    width: 100%;
+    height: 8rem;
+    position: relative;
+    top: 100%;
+    border-radius: 0px 8.6rem;
+  }
+
+  .blog_content .no-pc p {
+    line-height: 8rem;
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .blog_content .no-pc p {
+    font-size: 3rem;
+  }
+}
+
 .blog_content.four p {
   position: absolute;
   rotate: -90deg;
   top: 50%;
   color: #001a26;
   font-size: 2em;
+}
+
+@media screen and (max-width: 1300px) {
+  .blog_content.four p {
+    font-size: 1.3em !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .blog_content.four p {
+    rotate: 0deg;
+  }
 }
 
 .contact {
@@ -1058,6 +1156,12 @@ li {
 
 .contact_container {
   padding-top: 9rem;
+}
+
+@media screen and (max-width: 767px) {
+  .contact_container {
+    padding-top: 4.8rem;
+  }
 }
 
 .contact .section_title {
@@ -1072,12 +1176,33 @@ li {
     -1px 0 0 #FFF, 1px 0 0 #FFF;
 }
 
+@media screen and (max-width: 767px) {
+  .contact .section_title {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .contact .section_title {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+}
+
 .contact .contact_container div {
   font-weight: bold;
   font-size: 4.6rem;
   color: #fff;
   /* white-space: nowrap; */
   margin-bottom: 4.5rem;
+}
+
+@media screen and (max-width: 767px) {
+  .contact .contact_container div {
+    margin-bottom: 3.rem;
+    font-size: 2.4rem;
+  }
 }
 
 .contact button {
@@ -1093,6 +1218,24 @@ li {
   background: transparent;
 }
 
+@media screen and (max-width: 767px) {
+  .contact button {
+    font-size: 2.8rem;
+    height: 8.6rem;
+    max-width: 36rem;
+    width: 100%;
+    margin-bottom: 5.5rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .contact button {
+    font-size: 2.3rem;
+    height: 8rem;
+    max-width: 30rem;
+  }
+}
+
 .footer {
   margin-top: 6rem;
   margin-bottom: 6rem;
@@ -1103,6 +1246,13 @@ li {
   max-width: 67.5rem;
   align-items: center;
   justify-content: space-around;
+}
+
+@media screen and (max-width: 767px) {
+  .footer_snslinks {
+    max-width: 48rem;
+    padding: 0;
+  }
 }
 
 .footer_snslink {
