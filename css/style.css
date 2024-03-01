@@ -12,12 +12,6 @@ html {
   }
 }
 
-/* @media screen and (max-width: 767px) {
-  html {
-    font-size: calc(10 / 375 * 100vw);
-  }
-} */
-
 body {
   font-family: 'DIN Alternate', 'Oswald', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', 'Meiryo', 'ＭＳ Ｐゴシック', sans-serif;
   font-size: 1.6rem;
