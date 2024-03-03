@@ -56,30 +56,19 @@ $(window).resize(function () {
   }
 });
 
-var swiper = new Swiper('.swiper', {
-  direction: "vertical",
-  slideToClickedSlide: true,
-  mousewheel: true,
-  slidesPerView: 1.5,
-  spaceBetween: 15,
-  centeredSlides: true,
-  loop: true,
-  breakpoints: {
-    768: {
-      direction: "horizontal",
-      slidesPerView: 3,
-      spaceBetween: 20,
-      centeredSlides: true,
+window.onload = function () {
+  const swiper = new Swiper(".swiper", {
+    spaceBetween: 50,
+    // 反映スライド数
+    // slidesPerView: "auto",
+    slidesPerView: 3,
+    // 行数
+    grid: {
+      rows: 3,
     },
-    1600: {
-      direction: "horizontal",
-      slidesPerView: 3,
-      spaceBetween: 40,
-      centeredSlides: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
+  });
+}
