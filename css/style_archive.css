@@ -1,18 +1,21 @@
 .archive_blog {
   /* margin-top: 16rem; */
   padding: 34rem 1rem 6.7rem;
-  margin-block: 50px;
   width: 100%;
 }
 
 .archive_blog .swiper {
-  height: 100rem;
-  max-width: 81%;
+  height: 125rem;
+  /* max-width: 64%;
+  width: 100%; */
+  width: 110rem;
+  margin: 0 auto;
+  position: relative;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1600px) {
   .archive_blog .swiper {
-    height: 45vw;
+    max-width: 80%;
   }
 }
 
@@ -20,13 +23,34 @@
   height: 100%;
 }
 
-.archive_blog .swiper-wrapper {}
+.archive_blog .swiper-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-content: center;
+  align-content: flex-start;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1400px) {
+  .archive_blog .swiper-wrapper {
+    max-height: 90%;
+    /* max-width: 40rem; */
+    max-width: 40%;
+  }
+}
 
 .archive_blog .swiper-slide {
   position: relative;
   background-color: #001A26;
   max-width: 34rem;
   max-height: 30rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .archive_blog .swiper-slide {
+    max-width: 80%;
+  }
 }
 
 .archive_blog .swiper-slide::after {
@@ -42,5 +66,71 @@
   overflow: hidden;
   object-position: 50% 50%;
   left: 10%;
-  content: url(/images/blog_1.png);
+  /* content: url(/images/blog_1.png); */
+  content: "";
+  background-image: url(/images/blog_1.jpg);
 }
+
+.archive_blog .swiper-button-next,
+.archive_blog .swiper-button-prev {
+  opacity: 1;
+  width: 224px;
+  height: 52px;
+  border-radius: 26px;
+  background: #fff;
+  border: 1px solid #001a26;
+  top: 94%;
+  left: 60%;
+}
+
+@media screen and (max-width: 1200px) {
+
+  .archive_blog .swiper-button-next,
+  .archive_blog .swiper-button-prev {
+    top: 64%;
+  }
+}
+
+.archive_blog .swiper-button-prev {
+  left: 20%;
+}
+
+@media screen and (max-width: 767px) {
+
+  .archive_blog .swiper-button-next,
+  .archive_blog .swiper-button-prev {
+    display: none;
+  }
+}
+
+.button_wraper {
+  max-width: 70%;
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  display: none;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+  display: none;
+}
+
+.archive_blog .swiper-button-next::before,
+.archive_blog .swiper-button-prev::before {
+  position: absolute;
+  content: "次のページへ";
+  border-radius: 50%;
+  color: #001A26
+}
+
+.archive_blog .swiper-button-prev::before {
+  content: "前のページへ";
+}
+
+
+.archive_blog .swiper-button-next::after,
+.archive_blog .swiper-button-prev::after {}
+
+.archive_blog .swiper-button-prev::after {}

@@ -58,13 +58,42 @@ $(window).resize(function () {
 
 window.onload = function () {
   const swiper = new Swiper(".swiper", {
-    spaceBetween: 50,
+    direction: "vertical",
+    // slideToClickedSlide: true,
+    // spaceBetween: 50,
     // 反映スライド数
     // slidesPerView: "auto",
-    slidesPerView: 3,
-    // 行数
+    // slidesPerView: 3,
+    slidesPerView: "auto",
     grid: {
       rows: 3,
+    },
+    // 行数
+    // grid: {
+    //   rows: 3,
+    // },
+    mousewheel: true,
+    // centeredSlides: true,
+    // loop: true,
+    breakpoints: {
+      768: {
+        direction: "horizontal",
+        slidesPerView: 2,
+        // spaceBetween: 20,
+        // centeredSlides: true,
+      },
+      1400: {
+        direction: "horizontal",
+        // slidesPerView: 1,
+        slidesPerView: "auto",
+        // slidesPerView: "auto",
+
+        // grid: {
+        //   rows: 2,
+        // },
+        // spaceBetween: 40,
+        // centeredSlides: true,
+      },
     },
     navigation: {
       nextEl: ".swiper-button-next",
