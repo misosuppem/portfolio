@@ -56,48 +56,63 @@ $(window).resize(function () {
   }
 });
 
-window.onload = function () {
-  const swiper = new Swiper(".swiper", {
-    direction: "vertical",
-    // slideToClickedSlide: true,
-    // spaceBetween: 50,
-    // 反映スライド数
-    // slidesPerView: "auto",
-    // slidesPerView: 3,
-    slidesPerView: "auto",
-    grid: {
-      rows: 3,
-    },
-    // 行数
-    // grid: {
-    //   rows: 3,
-    // },
-    mousewheel: true,
-    // centeredSlides: true,
-    // loop: true,
-    breakpoints: {
-      768: {
-        direction: "horizontal",
-        slidesPerView: 2,
-        // spaceBetween: 20,
-        // centeredSlides: true,
+// window.onload = function () {
+//   const swiper = new Swiper(".swiper", {
+//     direction: "vertical",
+//     slidesPerView: "auto",
+//     grid: {
+//       rows: 3,
+//     },
+//     mousewheel: true,
+//     breakpoints: {
+//       768: {
+//         direction: "horizontal",
+//         slidesPerView: 2,
+//       },
+//       1400: {
+//         direction: "horizontal",
+//         slidesPerView: "auto",
+//         grid: {
+//           rows: 2,
+//         },
+//       },
+//     },
+//     navigation: {
+//       nextEl: ".swiper-button-next",
+//       prevEl: ".swiper-button-prev",
+//     },
+//   });
+// }
+var swiper = new Swiper('.swiper', {
+  direction: "vertical",
+  slideToClickedSlide: true,
+  mousewheel: true,
+  slidesPerView: 1.5,
+  spaceBetween: 15,
+  centeredSlides: true,
+  loop: true,
+  breakpoints: {
+    768: {
+      direction: "horizontal",
+      slidesPerView: 3,
+      spaceBetween: 20,
+      centeredSlides: true,
+      grid: {
+        rows: 2,
       },
-      1400: {
-        direction: "horizontal",
-        // slidesPerView: 1,
-        slidesPerView: "auto",
-        // slidesPerView: "auto",
-
-        // grid: {
-        //   rows: 2,
-        // },
-        // spaceBetween: 40,
-        // centeredSlides: true,
+    },
+    1600: {
+      direction: "horizontal",
+      slidesPerView: 3,
+      spaceBetween: 40,
+      centeredSlides: true,
+      grid: {
+        rows: 2,
       },
     },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-  });
-}
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
