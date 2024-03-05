@@ -97,6 +97,8 @@ var swiper = new Swiper('.swiper', {
       slidesPerView: 3,
       spaceBetween: 20,
       centeredSlides: true,
+      // centeredSlides: false,
+      // offsetPxBefore: 0,
       grid: {
         rows: 2,
       },
@@ -106,6 +108,7 @@ var swiper = new Swiper('.swiper', {
       slidesPerView: 3,
       spaceBetween: 40,
       centeredSlides: true,
+      // centeredSlides: true,
       grid: {
         rows: 2,
       },
