@@ -87,8 +87,8 @@ var swiper = new Swiper('.swiper', {
   direction: "vertical",
   slideToClickedSlide: true,
   mousewheel: true,
-  slidesPerView: 1.5,
-  spaceBetween: 15,
+  slidesPerView: 3,
+  spaceBetween: 50,
   centeredSlides: true,
   loop: true,
   breakpoints: {
