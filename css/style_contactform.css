@@ -1,1 +1,85 @@
+.contactform {
+  color: #fff;
+  padding: 30rem 1rem 6.7rem;
+}
 
+@media screen and (max-width: 767px) {
+  .contactform {
+    padding: 5rem 0.1rem 3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contactform {
+    max-width: 90%;
+  }
+}
+
+.contact_container {
+  background-color: #001a26;
+  font-size: 2.8rem;
+  letter-spacing: 0.05em;
+  text-align: left;
+  color: #fff;
+}
+
+.contact_wrapper {
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact_container .section_title {
+  color: #FEED17;
+  font-size: 5rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 #FFF, -1px -1px 0 #FFF,
+    -1px 1px 0 #FFF, 1px -1px 0 #FFF,
+    0px 1px 0 #FFF, 0-1px 0 #FFF,
+    -1px 0 0 #FFF, 1px 0 0 #FFF;
+}
+
+@media screen and (max-width: 767px) {
+  .contact_container .section_title {
+    font-size: 3.5rem;
+  }
+}
+
+.form_label {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactform input {
+  background-color: #fff;
+  margin-top: 1rem;
+  margin-bottom: 7rem;
+  height: 5rem;
+}
+
+.contactform textarea {
+  background-color: #fff;
+  height: 20rem;
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+.button_wrapper {
+  text-align: center;
+}
+
+.contactform .submit_button {
+  width: 32rem;
+  height: 7.2rem;
+  border-radius: 3.6rem;
+  background-color: #001a26;
+  border: 3px solid #feed17;
+}
+
+@media screen and (max-width: 767px) {
+  .contactform .submit_button {
+    font-size: 3rem;
+    width: 60%;
+    height: 6.2rem;
+  }
+}

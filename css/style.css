@@ -114,7 +114,6 @@ li {
   border-radius: 5px;
   width: 9rem;
   height: 7rem;
-  /* background-color: #feed17; */
 }
 
 @media screen and (max-width: 767px) {
@@ -123,18 +122,11 @@ li {
   }
 }
 
-/* @media screen and (max-width: 450px) {
+@media screen and (max-width: 400px) {
   .openbtn {
-    left: 55%;
+    left: 70%;
   }
-} */
-
-/*
-@media screen and (max-width: 550px) {
-  .openbtn {
-    left: 40%;
-  }
-} */
+}
 
 .openbtn span {
   display: inline-block;
@@ -200,7 +192,6 @@ li {
   }
 }
 
-/*fadeDownクラスが付与された後のボタンの出現アニメーション設定*/
 .fadeDown {
   animation-name: fadeDownAnime;
   animation-duration: 0.5s;

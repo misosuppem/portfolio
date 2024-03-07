@@ -5,6 +5,12 @@
   height: 100%;
 }
 
+@media screen and (max-width: 767px) {
+  .archive_blog {
+    padding: 5.5rem 0.1rem 3rem;
+  }
+}
+
 .archive_blog .swiper {
   height: 78rem;
   /* max-width: 64%;
