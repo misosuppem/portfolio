@@ -1,5 +1,4 @@
 .archive_blog {
-  /* margin-top: 16rem; */
   padding: 30rem 1rem 6.7rem;
   width: 100%;
   height: 100%;
@@ -13,9 +12,6 @@
 
 .archive_blog .swiper {
   height: 78rem;
-  /* max-width: 64%;
-  width: 100%; */
-  /* width: 78%; */
   width: 147rem;
   margin: 0 auto;
   position: relative;
@@ -50,24 +46,13 @@
 }
 
 .archive_blog .swiper-wrapper {
-  /* display: flex; */
-  /* flex-wrap: wrap; */
   height: 68rem;
-  /* gap: 14rem; */
-  /* gap: 14rem 3rem; */
-  /* align-content: center; */
-  /* align-content: flex-start; */
-  /* justify-content: center; */
-  /* width: 130rem !important; */
-  /* overflow: hidden; */
   margin: 0 auto;
 }
 
 @media screen and (max-width: 1400px) {
   .archive_blog .swiper-wrapper {
     max-height: 90%;
-    /* max-width: 40rem; */
-    /* max-width: 40%; */
   }
 }
 
@@ -78,7 +63,6 @@
 }
 
 .archive_blog .swiper-slide {
-  /* position: relative; */
   max-width: 34rem;
   max-height: 25rem;
   overflow: hidden;
@@ -86,10 +70,8 @@
   overflow: hidden;
   object-position: 50% 50%;
   background-color: #001A26;
-  /* margin: 0 auto; */
   margin-right: auto !important;
   margin-left: auto !important;
-  /* margin-bottom: 3rem; */
 }
 
 @media screen and (max-width: 1600px) {
@@ -98,7 +80,6 @@
     height: 100%;
     z-index: 99;
     max-width: 32rem;
-    /* margin-right: 6rem !important; */
   }
 }
 
@@ -130,20 +111,6 @@
   margin-right: auto;
 }
 
-/* .archive_blog .swiper-slide::after {
-  position: absolute;
-  max-height: 100%;
-  background-color: #001A26;
-  z-index: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  overflow: hidden;
-  object-position: 50% 50%;
-  left: 10%;
-  content: "";
-} */
-
 .archive_blog .swiper-button-next,
 .archive_blog .swiper-button-prev {
   opacity: 1;
@@ -163,7 +130,6 @@
     top: 90%;
     width: 179.2px;
     height: 41.6px;
-    /* font-size: 1rem; */
   }
 }
 
@@ -178,11 +144,6 @@
     display: none;
   }
 }
-
-/*
-.button_wraper {
-  max-width: 70%;
-} */
 
 .swiper-button-next:after,
 .swiper-rtl .swiper-button-prev:after {
