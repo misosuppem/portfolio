@@ -1,4 +1,14 @@
 /*
+Theme Name: テーマ名（必須項目）
+Theme URl: テーマのURL
+Author: テーマの作成者
+Description: テーマの説明
+tags: テーマのタグ
+License: テーマのライセンス
+License URl: テーマのライセンスURL
+Version: バージョン
+*/
+/*
 Theme Name: Misosuppe'sPortfolio
 Description:misosuppeのポートフォリオサイトです。
 Version: 1.1
@@ -23,7 +33,7 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   color: #001A26;
-  background-image: url("../images/background.png");
+  background-image: url("/images/background.png");
   background-repeat: repeat;
 }
 
@@ -1033,8 +1043,7 @@ li {
 
 .blog_content.one {
   grid-area: a;
-  /* background-image: url('images/blog_1.png'); */
-  background-image: url(../images/blog_1.png);
+  background-image: url('/images/blog_1.png');
   background-size: cover;
 }
 
@@ -1042,7 +1051,7 @@ li {
   .blog_container>.blog_content {
     position: relative;
     background-size: cover;
-    background-image: url(../images/blog_1.png);
+    background-image: url(/images/blog_1.png);
     width: 100%;
     top: 10%;
     height: 70%;
@@ -1052,14 +1061,14 @@ li {
 
 .blog_content.two {
   grid-area: b;
-  background-image: url('../images/blog_2.png');
+  background-image: url('/images/blog_2.png');
   background-size: cover;
 }
 
 
 .blog_content.three {
   grid-area: c;
-  background-image: url('../images/blog_3.png');
+  background-image: url('/images/blog_3.png');
   background-size: cover;
 }
 
