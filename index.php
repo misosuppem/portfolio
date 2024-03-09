@@ -101,7 +101,7 @@
         <!-- <a class="no-pc" href="<?php echo get_template_directory_uri(); ?>./archive.html"> -->
         <!-- <a class="no-pc" href="<?php echo get_template_directory_uri(); ?>../archive.html#archive_blog"> -->
         <!-- <a class="no-pc" href="<?php echo get_template_directory_uri(); ?>../archive.html#archive_blog"> -->
-        <a class="no-pc" href="<?php echo get_template_directory_uri(); ?>/archive.html">
+        <a class="no-pc" href="<?php echo get_template_directory_uri(); ?>./archive.php">
           <p>read_more</p>
         </a>
       </div>
