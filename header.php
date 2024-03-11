@@ -4,20 +4,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Welcome To Myportfolio</title>
+  <title>><?php bloginfo('name'); ?></title>
+  <?php wp_head(); ?>
   <meta name="description" content="misosuppe's portfolio.">
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css">
-  <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css" type="text/css" media="screen">
-  <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style_archive.css" type="text/css" media="screen"> -->
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style_contactform.css" type="text/css" media="screen">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style_single.css" type="text/css" media="screen">
-  <?php wp_head(); ?>
+  <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css" type="text/css" media="screen"> -->
+  <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style_contactform.css" type="text/css" media="screen"> -->
+  <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style_single.css" type="text/css" media="screen"> -->
+  <?php
+  wp_enqueue_style('fonr-awesome', 'https://use.fontawesome.com/releases/v6.4.2/css/all.css');
+  wp_enqueue_style('ress-min-css', 'https://unpkg.com/ress@4.0.0/dist/ress.min.css');
+  wp_enqueue_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+  wp_enqueue_style('style-css', get_template_directory_uri() . '/css/style.css');
+  wp_enqueue_style('style-contactform-css', get_template_directory_uri() . '/css/style_contactform.css');
+  wp_enqueue_style('style-single-css', get_template_directory_uri() . '/css/style_single.css');
+  wp_enqueue_script('jquery');
+  wp_enqueue_script('misosuppe-portfolio-main', get_template_directory_uri() . '/js/main.js');
+  wp_head();
+  ?>
 </head>
 
-<body>
+<bodyy<?php body_class(); ?>>
+  <?php wp_body_open(); ?>
   <header id="header">
     <div class="header-nav-container">
       <nav id="g-navi">

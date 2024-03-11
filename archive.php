@@ -3,25 +3,25 @@
 
   <section id="archive_blog wrapper" class="archive_blog">
     <h2 class="section_title">
-      <img class="title_img" src="/images/title_blog.png" alt="blog">
+      <img class="title_img" src="<?php echo get_template_directory_uri(); ?>/images/title_blog.png" alt="blog">
     </h2>
     <div class="swiper">
       <div class="swiper-wrapper">
-        <div class="swiper-slide"><a href="/single.html"><img class="blog_img" src="/images/blog記事１.png" alt=""></a>
+        <div class="swiper-slide"><a href="/single.html"><img class="blog_img" src="<?php echo get_template_directory_uri(); ?>/images/blog記事１.png" alt=""></a>
         </div>
-        <div class="swiper-slide"><a href="/single.html"><img class="blog_img" src="/images/blog記事２.png" alt=""></a>
+        <div class="swiper-slide"><a href="/single.html"><img class="blog_img" src="<?php echo get_template_directory_uri(); ?>/images/blog記事２.png" alt=""></a>
         </div>
-        <div class="swiper-slide"><a href="/single.html"><img class="blog_img" src="/images/blog記事３.png" alt=""></a>
+        <div class="swiper-slide"><a href="/single.html"><img class="blog_img" src="<?php echo get_template_directory_uri(); ?>/images/blog記事３.png" alt=""></a>
         </div>
-        <div class="swiper-slide"><a href="/single.html"><img class="blog_img" src="/images/blog記事１.png" alt=""></a>
+        <div class="swiper-slide"><a href="/single.html"><img class="blog_img" src="<?php echo get_template_directory_uri(); ?>/images/blog記事１.png" alt=""></a>
         </div>
-        <div class="swiper-slide"><a href="/single.html"><img class="blog_img" src="/images/blog記事２.png" alt=""></a>
+        <div class="swiper-slide"><a href="/single.html"><img class="blog_img" src="<?php echo get_template_directory_uri(); ?>/images/blog記事２.png" alt=""></a>
         </div>
-        <div class="swiper-slide"><a href="/single.html"><img class="blog_img" src="/images/blog記事３.png" alt=""></a>
+        <div class="swiper-slide"><a href="/single.html"><img class="blog_img" src="<?php echo get_template_directory_uri(); ?>/images/blog記事３.png" alt=""></a>
         </div>
-        <div class="swiper-slide"><a href="/single.html"><img class="blog_img" src="/images/blog記事１.png" alt=""></a>
+        <div class="swiper-slide"><a href="/single.html"><img class="blog_img" src="<?php echo get_template_directory_uri(); ?>/images/blog記事１.png" alt=""></a>
         </div>
-        <div class="swiper-slide"><a href="/single.html"><img class="blog_img" src="/images/blog記事２.png" alt=""></a>
+        <div class="swiper-slide"><a href="/single.html"><img class="blog_img" src="<?php echo get_template_directory_uri(); ?>/images/blog記事２.png" alt=""></a>
         </div>
       </div>
       <div class="swiper-button-prev"></div>

@@ -14,22 +14,7 @@
 <script type="text/javascript" src="<?php echo get_template_directory_uri() . '/js/main.js'; ?>"></script>
 <!-- <script type="text/javascript" src="<?php echo get_template_directory_uri() . './js/main.js'; ?>"></script> -->
 
-<!-- <?php
-      // テーマフォルダ内の「my-script.js」を読み込む場合
-      add_action('wp_enqueue_scripts', function () {
-        wp_enqueue_script('my-script', get_template_directory_uri() . 'js/main.js');
-      }); ?> -->
-
-<!-- <?php
-      // テーマフォルダ内の「my-script.js」を読み込む場合
-      add_action('wp_enqueue_scripts', function () {
-        wp_enqueue_script('my-script', get_template_directory_uri() . '../js/main.js');
-      });
-
-      // 出力結果
-      ?> -->
-
-</body>
+<?php wp_footer(); ?>
 </body>
 
 <?php wp_footer(); ?>
