@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 <main>
 
+
   <section id="archive_blog wrapper" class="archive_blog">
     <h2 class="section_title">
       <img class="title_img" src="<?php echo get_template_directory_uri(); ?>/images/title_blog.png" alt="blog">

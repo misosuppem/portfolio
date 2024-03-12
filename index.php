@@ -97,7 +97,7 @@
             <!-- リンク -->
             <a href="<?php echo esc_url(get_permalink($data[0]->ID)); ?>" class="post-link">
               <!-- タイトル表示 -->
-              <h2 class="post-title"><?php echo esc_html($data[0]->post_title); ?></h2>
+              <h3 class="post-title"><?php echo esc_html($data[0]->post_title); ?></h3>
 
               <!-- 本文から最初の画像を取得して表示 -->
               <?php
@@ -129,7 +129,7 @@
             <!-- リンクとタイトル取得 -->
             <a href="<?php echo esc_url(get_permalink($data[1]->ID)); ?>" class="post-link">
               <!-- タイトル表示 -->
-              <h2 class="post-title"><?php echo esc_html($data[1]->post_title); ?></h2>
+              <h3 class="post-title"><?php echo esc_html($data[1]->post_title); ?></h3>
             </a>
 
             <!-- 本文から最初の画像を取得して表示 -->
@@ -165,7 +165,7 @@
             <!-- リンクとタイトル取得 -->
             <a href="<?php echo esc_url(get_permalink($data[0]->ID)); ?>" class="post-link">
               <!-- タイトル表示 -->
-              <h2 class="post-title"><?php echo esc_html($data[0]->post_title); ?></h2>
+              <h3 class="post-title"><?php echo esc_html($data[0]->post_title); ?></h3>
             </a>
 
             <!-- 本文から最初の画像を取得して表示 -->
@@ -203,7 +203,7 @@
           <!-- リンク -->
           <a href="<?php echo esc_url(get_permalink($data[0]->ID)); ?>" class="post-link">
             <!-- タイトル表示 -->
-            <h2 class="post-title"><?php echo esc_html($data[0]->post_title); ?></h2>
+            <h3 class="post-title"><?php echo esc_html($data[0]->post_title); ?></h3>
 
             <!-- 本文から最初の画像を取得して表示 -->
             <?php
