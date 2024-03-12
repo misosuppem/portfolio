@@ -188,16 +188,43 @@
           <?php endif; ?>
         </div>
 
-        <a class= "post-links" href="/archive.php">
+        <a class="post-links" href="/archive.php">
           <div class="blog_content four">
             <p>read_more</p>
           </div>
         </a>
       </div>
       <div class="blog_content no-pc">
-        <!-- <a class="no-pc" href="<?php echo get_template_directory_uri(); ?>./archive.html"> -->
-        <!-- <a class="no-pc" href="<?php echo get_template_directory_uri(); ?>../archive.html#archive_blog"> -->
-        <!-- <a class="no-pc" href="<?php echo get_template_directory_uri(); ?>../archive.html#archive_blog"> -->
+        <?php
+        $data = get_posts('post_type=post&posts_per_page=1');
+        if (isset($data[0])) :
+        ?>
+
+          <!-- リンク -->
+          <a href="<?php echo esc_url(get_permalink($data[0]->ID)); ?>" class="post-link">
+            <!-- タイトル表示 -->
+            <h2 class="post-title"><?php echo esc_html($data[0]->post_title); ?></h2>
+
+            <!-- 本文から最初の画像を取得して表示 -->
+            <?php
+            $content = apply_filters('the_content', $data[0]->post_content);
+            $doc = new DOMDocument();
+            libxml_use_internal_errors(true);
+            $doc->loadHTML($content);
+            libxml_clear_errors();
+
+            $xpath = new DOMXPath($doc);
+            $src = $xpath->evaluate("string(//img/@src)");
+
+            if ($src) {
+              echo '<img src="' . esc_url($src) . '" alt="Post Image" class="post-image">';
+            } else {
+              echo '<p class="no-image-message">No image found in the content.</p>';
+            }
+            ?>
+          </a>
+
+        <?php endif; ?>
         <a class="no-pc" href="<?php echo get_template_directory_uri(); ?>./archive.php">
           <p>read_more</p>
         </a>
