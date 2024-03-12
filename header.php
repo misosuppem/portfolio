@@ -4,13 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>><?php bloginfo('name'); ?></title>
   <?php wp_head(); ?>
   <meta name="description" content="misosuppe's portfolio.">
 
-  <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css" type="text/css" media="screen"> -->
-  <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style_contactform.css" type="text/css" media="screen"> -->
-  <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style_single.css" type="text/css" media="screen"> -->
   <?php
   wp_enqueue_style('fonr-awesome', 'https://use.fontawesome.com/releases/v6.4.2/css/all.css');
   wp_enqueue_style('ress-min-css', 'https://unpkg.com/ress@4.0.0/dist/ress.min.css');

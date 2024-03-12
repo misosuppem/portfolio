@@ -7,3 +7,8 @@ function my_scripts_method()
   );
 }
 add_action('wp_enqueue_scripts', 'my_scripts_method');
+
+/**
+ *<title>タグを出力する
+ **/
+add_theme_support('title-tag');

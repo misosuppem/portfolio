@@ -88,9 +88,106 @@
     </h2>
     <div class="blog_container container">
       <div class="golden-ratio no-sp">
-        <div class="blog_content one"></div>
-        <div class="blog_content two"></div>
-        <div class="blog_content three"></div>
+        <div class="blog_content one">
+          <?php
+          $data = get_posts('post_type=post&posts_per_page=1');
+          if (isset($data[0])) :
+          ?>
+
+            <!-- リンク -->
+            <a href="<?php echo esc_url(get_permalink($data[0]->ID)); ?>" class="post-link">
+              <!-- タイトル表示 -->
+              <h2 class="post-title"><?php echo esc_html($data[0]->post_title); ?></h2>
+
+              <!-- 本文から最初の画像を取得して表示 -->
+              <?php
+              $content = apply_filters('the_content', $data[0]->post_content);
+              $doc = new DOMDocument();
+              libxml_use_internal_errors(true);
+              $doc->loadHTML($content);
+              libxml_clear_errors();
+
+              $xpath = new DOMXPath($doc);
+              $src = $xpath->evaluate("string(//img/@src)");
+
+              if ($src) {
+                echo '<img src="' . esc_url($src) . '" alt="Post Image" class="post-image">';
+              } else {
+                echo '<p class="no-image-message">No image found in the content.</p>';
+              }
+              ?>
+            </a>
+
+          <?php endif; ?>
+        </div>
+        <div class="blog_content two">
+          <?php
+          $data = get_posts('post_type=post&posts_per_page=2'); // 2番目の記事まで取得
+
+          if (isset($data[1])) : // インデックス1の記事が存在する場合
+          ?>
+            <!-- リンクとタイトル取得 -->
+            <a href="<?php echo esc_url(get_permalink($data[1]->ID)); ?>" class="post-link">
+              <!-- タイトル表示 -->
+              <h2 class="post-title"><?php echo esc_html($data[1]->post_title); ?></h2>
+            </a>
+
+            <!-- 本文から最初の画像を取得して表示 -->
+            <?php
+            $content = apply_filters('the_content', $data[1]->post_content);
+            $doc = new DOMDocument();
+            libxml_use_internal_errors(true);
+            $doc->loadHTML($content);
+            libxml_clear_errors();
+
+            $xpath = new DOMXPath($doc);
+            $src = $xpath->evaluate("string(//img/@src)");
+
+            if ($src) {
+              echo '<img src="' . esc_url($src) . '" alt="Post Image" class="post-image">';
+            } else {
+              echo '<p class="no-image-message">No image found in the content.</p>';
+            }
+            ?>
+          <?php endif; ?>
+        </div>
+
+        <div class="blog_content three">
+          <?php
+          $data = get_posts(array(
+            'post_type' => 'post',
+            'posts_per_page' => 1,
+            'offset' => 2, // 最新から3番目の投稿（0から数えるので2）
+          ));
+
+          if (!empty($data)) : // 取得したデータがある場合
+          ?>
+            <!-- リンクとタイトル取得 -->
+            <a href="<?php echo esc_url(get_permalink($data[0]->ID)); ?>" class="post-link">
+              <!-- タイトル表示 -->
+              <h2 class="post-title"><?php echo esc_html($data[0]->post_title); ?></h2>
+            </a>
+
+            <!-- 本文から最初の画像を取得して表示 -->
+            <?php
+            $content = apply_filters('the_content', $data[0]->post_content);
+            $doc = new DOMDocument();
+            libxml_use_internal_errors(true);
+            $doc->loadHTML($content);
+            libxml_clear_errors();
+
+            $xpath = new DOMXPath($doc);
+            $src = $xpath->evaluate("string(//img/@src)");
+
+            if ($src) {
+              echo '<img src="' . esc_url($src) . '" alt="Post Image" class="post-image">';
+            } else {
+              echo '<p class="no-image-message">No image found in the content.</p>';
+            }
+            ?>
+          <?php endif; ?>
+        </div>
+
         <a href="/archive.html">
           <div class="blog_content four">
             <p>read_more</p>
