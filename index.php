@@ -188,7 +188,7 @@
           <?php endif; ?>
         </div>
 
-        <a href="/archive.html">
+        <a class= "post-links" href="/archive.php">
           <div class="blog_content four">
             <p>read_more</p>
           </div>

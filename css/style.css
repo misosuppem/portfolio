@@ -1031,14 +1031,16 @@ li {
 .blog_content {
   border: 1px solid;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
 .blog_content.one {
   grid-area: a;
-  /* background-image: url('images/blog_1.png'); */
-  /* background-image: url(../images/blog_1.png); */
-  background-size: cover;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .blog_content .title_img {
@@ -1047,10 +1049,15 @@ li {
 
 .blog_content .post-title {
   position: absolute;
+  color: #FFF;
+  top: 50%;
+  width: 100%;
+  z-index: 1;
 }
 
 .post-image {
   object-fit: cover;
+  filter: grayscale(100%);
   height: 100%;
 }
 
@@ -1068,24 +1075,26 @@ li {
 
 .blog_content.two {
   grid-area: b;
-  /* background-image: url('../images/blog_2.png'); */
-  background-size: cover;
+  font-size: 1.6rem;
 }
 
-
-.blog_content.three {
-  grid-area: c;
-  /* background-image: url('../images/blog_3.png'); */
-  background-size: cover;
-}
-
-.blog_container a {
+.blog_container .post-links {
   grid-area: d;
   position: relative;
   display: grid;
+}
+
+.blog_container .post-link {
   height: 100%;
 }
 
+.blog_content.three {
+  grid-area: c;
+  /* background-image: url('images/blog_1.png'); */
+  /* background-image: url(../images/blog_1.png); */
+  background-size: cover;
+  font-size: 1.3rem;
+}
 
 .blog_content.four {
   position: absolute;
