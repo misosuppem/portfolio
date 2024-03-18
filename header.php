@@ -34,8 +34,8 @@
       </nav>
     </div>
   </header>
-  <div class="openbtn">
+  <!-- <div class="openbtn">
     <span></span>
     <span></span>
     <span></span>
-  </div>
+  </div> -->
